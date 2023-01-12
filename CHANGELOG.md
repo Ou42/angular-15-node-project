@@ -43,3 +43,7 @@ $ npm ls
 
 - created ./app/models/index.js to setup Sequelize
 - updated server.js to use Sequelize to sync db
+
+### Define the Sequelize Model
+
+- created ./app/models/tutorial.model.js
