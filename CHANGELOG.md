@@ -32,3 +32,14 @@ $ npm ls
 ### String Interpolation
 
 - requires back-ticks!
+
+## 2023-01-12
+
+### Configure MySQL db & Sequelize
+
+- created ./app/config/db.config.js
+
+### Initialize Sequelize
+
+- created ./app/models/index.js to setup Sequelize
+- updated server.js to use Sequelize to sync db

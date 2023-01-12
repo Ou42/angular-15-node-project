@@ -1,5 +1,6 @@
 const express = require("express");
 const cors = require("cors");
+const db = require("./app/models");
 
 const app = express();
 
@@ -14,6 +15,23 @@ app.use(express.json());
 
 // parse requests of content-type - application/x-www-form-urlencoded
 app.use(express.urlencoded({ extended: true }));
+
+// Initialize Sequelize / Sync to db
+db.sequelize.sync()
+  .then(() => {
+    console.log("Synced db.");
+  })
+  .catch((err) => {
+    console.log("Failed to sync db: " + err.message);
+  });
+
+// During development, may need to drop existing tables
+// and re-sync database:
+/*
+db.sequelize.sync({ force: true }).then(() => {
+  console.log("Drop and re-sync db.");
+});
+*/
 
 // simple route
 app.get("/", (req, res) => {
