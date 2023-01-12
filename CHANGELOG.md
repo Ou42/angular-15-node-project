@@ -28,6 +28,7 @@ $ npm ls
 ├── express@4.18.2
 ├── mysql2@2.3.3
 └── sequelize@6.28.0
+```
 
 ### String Interpolation
 
