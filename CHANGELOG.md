@@ -48,3 +48,19 @@ $ npm ls
 ### Define the Sequelize Model
 
 - created ./app/models/tutorial.model.js
+
+### To Do:
+
+- [ ] vscode offers to convert CommonJS module to ES module
+
+### Create the Controller
+
+- created ./app/controller/tutorial.controller.js  
+  with the following CRUD functions:
+  - create
+  - findAll
+  - findOne
+  - update
+  - delete
+  - deleteAll
+  - findAllPublished
