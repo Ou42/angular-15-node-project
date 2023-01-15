@@ -64,3 +64,24 @@ $ npm ls
   - delete
   - deleteAll
   - findAllPublished
+
+## 2023-01-14
+
+### Things skipped/missed:
+
+- Needed to *install* MySQL  
+  <https://dev.mysql.com/doc/mysql-apt-repo-quick-guide/en/>
+- Access mysql via:  
+  `mysql -u root -p`  
+  <https://dev.mysql.com/doc/mysql-getting-started/en/>
+- Needed to `CREATE DATABASE testdb;`
+
+### Finish code for the Controller
+
+- [x] create
+- [ ] findAll
+- [ ] findOne
+- [ ] update
+- [ ] delete
+- [ ] deleteAll
+- [ ] findAllPublished
