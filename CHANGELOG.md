@@ -79,9 +79,9 @@ $ npm ls
 ### Finish code for the Controller
 
 - [x] create
-- [ ] findAll
-- [ ] findOne
-- [ ] update
-- [ ] delete
-- [ ] deleteAll
-- [ ] findAllPublished
+- [x] findAll
+- [x] findOne
+- [x] update
+- [x] delete
+- [x] deleteAll
+- [x] findAllPublished
