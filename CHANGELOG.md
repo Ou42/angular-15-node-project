@@ -97,5 +97,86 @@ $ npm ls
 > These are our routes:  
 > 
 > - /api/tutorials: GET, POST, DELETE
-> - /api/tutorials/:id: GET, PUT, DELETE
+> - /api/tutorials/\<id\> GET, PUT, DELETE
 > - /api/tutorials/published: GET
+
+## 2023-01-16 - Test the APIs
+
+### Create a few tutorials using `POST` & `/tutorials` API
+
+```
+curl -X POST -H 'Content-Type: application/json' -d '{"title": "Board Games: Tut #1","description": "How to cheat at checkers"}' http://localhost:8080/api/tutorials
+
+curl -X POST -H 'Content-Type: application/json' -d '{"title": "Board Games: Tut #2","description": "How to cheat at chess"}' http://localhost:8080/api/tutorials
+
+curl -X POST -H 'Content-Type: application/json' -d '{"title": "Pencil & Paper Games: Tut #3","description": "How to cheat at tic-tac-toe"}' http://localhost:8080/api/tutorials
+
+curl -X POST -H 'Content-Type: application/json' -d '{"title": "Delete Me: Tut #4","description": "Nothing here"}' http://localhost:8080/api/tutorials
+```
+
+---
+
+### Confirm tutorials added to testdb using mysql
+
+```
+$ mysql -u root -p
+mysql> USE testdb;
+mysql> select * from tutorials;
+...
+```
+
+---
+
+### Retrieve all Tutorials using `GET` & `/tutorials` API
+
+- curl defaults to `GET` request  
+  `curl http://localhost:8080/api/tutorials`
+
+---
+
+### Retrieve a single Tutorial by `id` using `GET` & `/tutorials/<id>` API
+
+- curl defaults to `GET` request  
+  `curl http://localhost:8080/api/tutorials/2`
+
+---
+
+### Update a Tutorial using `PUT` & `/tutorials/<id>` API
+
+```
+curl -X PUT -H 'Content-Type: application/json' -d '{"description": "How to lose at checkers"}' http://localhost:8080/api/tutorials/1
+
+curl -X PUT -H 'Content-Type: application/json' -d '{"description": "How to lose at chess"}' http://localhost:8080/api/tutorials/2
+
+curl -X PUT -H 'Content-Type: application/json' -d '{"description": "How to lose at tic-tac-toe"}' http://localhost:8080/api/tutorials/3
+
+curl -X PUT -H 'Content-Type: application/json' -d '{"published": true}' http://localhost:8080/api/tutorials/3
+```
+
+---
+
+### Find all Tutorials, where title contains "board"
+
+#### `GET` & `/tutorials?title=board`
+
+- `curl http://localhost:8080/api/tutorials?title=board`
+
+---
+
+### Find all published tutorials using `GET` & `/tutorials/published` API
+
+- `curl http://localhost:8080/api/tutorials/published`
+
+---
+
+### Delete a Tutorial using `DELETE` & `/tutorials/<id>` API
+
+- `curl -X DELETE http://localhost:8080/api/tutorials/4`
+
+---
+
+### Delete all Tutorials using `DELETE` & `/tutorials` API
+
+- `curl -X DELETE http://localhost:8080/api/tutorials`
+
+---
