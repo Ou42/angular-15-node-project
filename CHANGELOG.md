@@ -104,6 +104,8 @@ $ npm ls
 
 - How to from:  
   <https://terminalcheatsheet.com/guides/curl-rest-api>
+- Start server: `node server.js`
+- Open another terminal and ...
 
 ### Create a few tutorials using `POST` & `/tutorials` API
 
@@ -119,7 +121,7 @@ curl -X POST -H 'Content-Type: application/json' -d '{"title": "Delete Me: Tut #
 
 ---
 
-### Confirm tutorials added to testdb using mysql
+### Confirm tutorials were added to testdb using `mysql`
 
 ```
 $ mysql -u root -p
