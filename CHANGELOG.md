@@ -185,3 +185,26 @@ curl -X PUT -H 'Content-Type: application/json' -d '{"published": true}' http://
 - `curl -X DELETE http://localhost:8080/api/tutorials`
 
 ---
+
+## 2023-01-16 - Angular 15 Front-end
+
+### Setup Angular 15 Project
+
+- Installed Angular
+  - Angular requires an "active LTS" version of Node.js  
+    per: <https://angular.io/guide/setup-local>
+  - set `nvm` default to `lts/hydrogen`  
+    `$ nvm alias default lts/hydrogen`  
+    now it defaults to v18.13.0
+  - `$ npm install -g @angular/cli`
+- Created new Angular Project
+  - `$ ng new angular-15-crud-example`
+  - ? Would you like to add Angular routing? Yes
+  - ? Which stylesheet format would you like to use? CSS
+- Generate Components and Services
+  - `$ ng g s services/tutorial`
+  - `$ ng g c components/add-tutorial`
+  - `$ ng g c components/tutorial-details`
+  - `$ ng g c components/tutorials-list`
+  - `$ ng g class models/tutorial --type=model`
+  
