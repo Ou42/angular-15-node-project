@@ -102,6 +102,9 @@ $ npm ls
 
 ## 2023-01-16 - Test the APIs
 
+- How to from:  
+  <https://terminalcheatsheet.com/guides/curl-rest-api>
+
 ### Create a few tutorials using `POST` & `/tutorials` API
 
 ```
