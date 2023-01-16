@@ -208,3 +208,7 @@ curl -X PUT -H 'Content-Type: application/json' -d '{"published": true}' http://
   - `$ ng g c components/tutorials-list`
   - `$ ng g class models/tutorial --type=model`
   
+  ### Setup App Module
+
+  - imported FormsModule & HttpClientModule  
+    to app.module.ts

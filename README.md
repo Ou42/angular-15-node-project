@@ -11,13 +11,15 @@
 
 ## Tools:
 
-| app/tool  | version  |
-| -------:  | :------  |
-| nvm       | 0.39.3   |
-| node      | v18.13.0 |
-| npm       | 8.19.3   |
-| cors      | 2.8.5 |
-| express   | 4.18.2 |
-| mysql2    | 2.3.3 |
-| sequelize | 6.28.0 |
-| angular   | _ |
+|   app/tool | version |
+| ---------: | :------ |
+|        nvm | 0.39.3  |
+|       node | 18.13.0 |
+|        npm | 8.19.3  |
+|       cors | 2.8.5   |
+|    express | 4.18.2  |
+|     mysql2 | 2.3.3   |
+|  sequelize | 6.28.0  |
+|    angular | 15.1.1  |
+|       rxjs | 7.8.0   |
+| typescript | 4.9.4   |
