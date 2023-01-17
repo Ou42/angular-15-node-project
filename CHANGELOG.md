@@ -253,3 +253,17 @@ curl -X PUT -H 'Content-Type: application/json' -d '{"published": true}' http://
   - is an `App` component
   - is the root container of the application
 - add `nav` element
+
+## 2023-01-17 - Create Angular 15 Components
+
+- 3 components correspond to 3 routes defined in `AppRoutingModule`
+
+### Add new Item Component
+
+- Create a Form to submit new Tutorial with 2 fields:  
+  `title` & `description`.
+- It calls `TutorialService.create()` method.
+- update:
+  - *components/add-tutorial/add-tutorial.component.ts*
+  - *components/add-tutorial/add-tutorial.component.html*
+  - *components/add-tutorial/add-tutorial.component.css*
