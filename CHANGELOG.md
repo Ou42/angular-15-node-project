@@ -246,3 +246,10 @@ curl -X PUT -H 'Content-Type: application/json' -d '{"published": true}' http://
 
 - `npm install bootstrap@4.6.2`
 - edit *src/style.css* & import bootstrap
+
+### Add Navbar & Router View
+
+- *src/app.component.html*
+  - is an `App` component
+  - is the root container of the application
+- add `nav` element
