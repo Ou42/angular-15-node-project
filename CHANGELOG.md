@@ -207,8 +207,16 @@ curl -X PUT -H 'Content-Type: application/json' -d '{"published": true}' http://
   - `$ ng g c components/tutorial-details`
   - `$ ng g c components/tutorials-list`
   - `$ ng g class models/tutorial --type=model`
-  
-  ### Setup App Module
 
-  - imported FormsModule & HttpClientModule  
-    to app.module.ts
+### Setup App Module
+
+- imported `FormsModule` & `HttpClientModule`  
+  to app.module.ts
+
+### Define Routes for Angular AppRoutingModule
+
+> There are 3 main routes:
+> - /tutorials for tutorials-list component
+> - /tutorials/:id for tutorial-details component
+> - /add for add-tutorial component
+
