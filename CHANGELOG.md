@@ -220,3 +220,12 @@ curl -X PUT -H 'Content-Type: application/json' -d '{"published": true}' http://
 > - /tutorials/:id for tutorial-details component
 > - /add for add-tutorial component
 
+### Define Model Class
+
+- export main model class `Tutorial`
+- found in *tutorial.model.ts*
+- contains 4 fields:
+  - id
+  - title
+  - description
+  - published
