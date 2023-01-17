@@ -235,3 +235,14 @@ curl -X PUT -H 'Content-Type: application/json' -d '{"published": true}' http://
 - *services/tutorial.service.ts*
 - ... uses Angular HttpClient to send HTTP requests
 - > functions include CRUD operations and finder method.
+
+## 2023-01-16 - Continue with step by step
+
+- Links to another tut:
+  - Angular 15 example: CRUD App with Web API
+  - <https://www.bezkoder.com/angular-15-crud-example/>
+
+### Import Bootstrap into Angular 15 Project
+
+- `npm install bootstrap@4.6.2`
+- edit *src/style.css* & import bootstrap

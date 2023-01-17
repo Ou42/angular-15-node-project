@@ -23,3 +23,4 @@
 |    angular | 15.1.1  |
 |       rxjs | 7.8.0   |
 | typescript | 4.9.4   |
+|  bootstrap | 4.6.2   |
