@@ -229,3 +229,9 @@ curl -X PUT -H 'Content-Type: application/json' -d '{"published": true}' http://
   - title
   - description
   - published
+
+### Create Data Service
+
+- *services/tutorial.service.ts*
+- ... uses Angular HttpClient to send HTTP requests
+- > functions include CRUD operations and finder method.
