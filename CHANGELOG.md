@@ -267,3 +267,11 @@ curl -X PUT -H 'Content-Type: application/json' -d '{"published": true}' http://
   - *components/add-tutorial/add-tutorial.component.ts*
   - *components/add-tutorial/add-tutorial.component.html*
   - *components/add-tutorial/add-tutorial.component.css*
+
+## 2023-01-23 - Create Angular 15 Components
+
+- 3 components correspond to 3 routes defined in `AppRoutingModule`
+
+### List of items Component
+
+- WIP
