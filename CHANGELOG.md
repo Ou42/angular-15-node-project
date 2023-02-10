@@ -275,3 +275,10 @@ curl -X PUT -H 'Content-Type: application/json' -d '{"published": true}' http://
 ### List of items Component
 
 - WIP
+
+## 2023-02-09 - Moved local SQL server to a container
+
+- using podman, a docker alt
+- `$ podman pull mysql:8-debian`
+- `$ podman run --name my-mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=<secret> -v $HOME/mysql-data:/var/lib/mysql -d mysql:8-debian`
+- replace \<secret\> w/ actual MySQL root password

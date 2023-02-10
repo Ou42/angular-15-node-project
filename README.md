@@ -16,6 +16,7 @@
 |          nvm | 0.39.3  |
 |         node | 18.13.0 |
 |          npm | 8.19.3  |
+|       podman | 3.4.4   |
 | MySQL server | 8.0.32  |
 |         cors | 2.8.5   |
 |      express | 4.18.2  |
