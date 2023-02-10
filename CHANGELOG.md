@@ -282,3 +282,14 @@ curl -X PUT -H 'Content-Type: application/json' -d '{"published": true}' http://
 - `$ podman pull mysql:8-debian`
 - `$ podman run --name my-mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=<secret> -v $HOME/mysql-data:/var/lib/mysql -d mysql:8-debian`
 - replace \<secret\> w/ actual MySQL root password
+
+### ***IF*** the container already exists
+
+- If `$ podman ps -a` lists the container
+- then, `$ podman start my-mysql`
+- start the node server: `$ node server.js`
+- open a new terminal
+- use `curl` for CRUD ops ( see above )
+- return to previous terminal
+- Ctrl + c to stop node server
+- `$ podman stop my-mysql` to stop the container
