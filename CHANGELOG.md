@@ -185,3 +185,125 @@ curl -X PUT -H 'Content-Type: application/json' -d '{"published": true}' http://
 - `curl -X DELETE http://localhost:8080/api/tutorials`
 
 ---
+
+## 2023-01-16 - Angular 15 Front-end
+
+### Setup Angular 15 Project
+
+- Installed Angular
+  - Angular requires an "active LTS" version of Node.js  
+    per: <https://angular.io/guide/setup-local>
+  - set `nvm` default to `lts/hydrogen`  
+    `$ nvm alias default lts/hydrogen`  
+    now it defaults to v18.13.0
+  - `$ npm install -g @angular/cli`
+- Created new Angular Project
+  - `$ ng new angular-15-crud-example`
+  - ? Would you like to add Angular routing? Yes
+  - ? Which stylesheet format would you like to use? CSS
+- Generate Components and Services
+  - `$ ng g s services/tutorial`
+  - `$ ng g c components/add-tutorial`
+  - `$ ng g c components/tutorial-details`
+  - `$ ng g c components/tutorials-list`
+  - `$ ng g class models/tutorial --type=model`
+
+### Setup App Module
+
+- imported `FormsModule` & `HttpClientModule`  
+  to app.module.ts
+
+### Define Routes for Angular AppRoutingModule
+
+> There are 3 main routes:
+> - /tutorials for tutorials-list component
+> - /tutorials/:id for tutorial-details component
+> - /add for add-tutorial component
+
+### Define Model Class
+
+- export main model class `Tutorial`
+- found in *tutorial.model.ts*
+- contains 4 fields:
+  - id
+  - title
+  - description
+  - published
+
+### Create Data Service
+
+- *services/tutorial.service.ts*
+- ... uses Angular HttpClient to send HTTP requests
+- > functions include CRUD operations and finder method.
+
+## 2023-01-16 - Continue with step by step
+
+- Links to another tut:
+  - Angular 15 example: CRUD App with Web API
+  - <https://www.bezkoder.com/angular-15-crud-example/>
+
+### Import Bootstrap into Angular 15 Project
+
+- `npm install bootstrap@4.6.2`
+- edit *src/style.css* & import bootstrap
+
+### Add Navbar & Router View
+
+- *src/app.component.html*
+  - is an `App` component
+  - is the root container of the application
+- add `nav` element
+
+## 2023-01-17 - Create Angular 15 Components
+
+- 3 components correspond to 3 routes defined in `AppRoutingModule`
+
+### Add new Item Component
+
+- Create a Form to submit new Tutorial with 2 fields:  
+  `title` & `description`.
+- It calls `TutorialService.create()` method.
+- update:
+  - *components/add-tutorial/add-tutorial.component.ts*
+  - *components/add-tutorial/add-tutorial.component.html*
+  - *components/add-tutorial/add-tutorial.component.css*
+
+## 2023-01-23 - Create Angular 15 Components
+
+- 3 components correspond to 3 routes defined in `AppRoutingModule`
+
+### List of items Component
+
+- WIP
+
+## 2023-02-09 - Moved local SQL server to a container
+
+- using podman, a docker alt
+- `$ podman pull mysql:8-debian`
+- `$ podman run --name my-mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=<secret> -v $HOME/mysql-data:/var/lib/mysql -d mysql:8-debian`
+- replace \<secret\> w/ actual MySQL root password
+
+### ***IF*** the container already exists
+
+- If `$ podman ps -a` lists the container
+- then, `$ podman start my-mysql`
+- start the node server: `$ node server.js`
+- open a new terminal
+- use `curl` for CRUD ops ( see above )
+- return to previous terminal
+- Ctrl + c to stop node server
+- `$ podman stop my-mysql` to stop the container
+
+## 2023-02-13 - Create Angular 15 Components
+
+- updated tutorial-details.component: ts, html & css
+- `$ podman start my-mysql`
+- `$ node server.js`
+
+### in a 2nd terminal
+
+- had to install Angular globally
+- `cd` to `angular-15-node-project/angular-15-crud-example` sub-folder
+- `$ npm install -g @angular/cli`
+- but Angular used the local version 15.1.1 instead of global 15.1.5 ver
+- `$ ng serve -o -port 8081`
