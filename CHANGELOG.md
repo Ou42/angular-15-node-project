@@ -293,3 +293,17 @@ curl -X PUT -H 'Content-Type: application/json' -d '{"published": true}' http://
 - return to previous terminal
 - Ctrl + c to stop node server
 - `$ podman stop my-mysql` to stop the container
+
+## 2023-02-13 - Create Angular 15 Components
+
+- updated tutorial-details.component: ts, html & css
+- `$ podman start my-mysql`
+- `$ node server.js`
+
+### in a 2nd terminal
+
+- had to install Angular globally
+- `cd` to `angular-15-node-project/angular-15-crud-example` sub-folder
+- `$ npm install -g @angular/cli`
+- but Angular used the local version 15.1.1 instead of global 15.1.5 ver
+- `$ ng serve -o -port 8081`
